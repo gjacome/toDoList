@@ -3,6 +3,7 @@ VOLUME /tmp
 RUN mkdir /app
 COPY . /app
 WORKDIR /app
+RUN gradle wrapper
 RUN /app/gradlew build
 FROM openjdk:21-jdk
 

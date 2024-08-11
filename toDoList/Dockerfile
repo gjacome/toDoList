@@ -3,7 +3,8 @@ VOLUME /tmp
 RUN mkdir /app
 COPY . /app
 WORKDIR /app
-RUN /app/gradlew build
+RUN /app/gradle build --stacktrace
+
 FROM openjdk:21-jdk
 ARG APP_VERSION=1.0.0
 LABEL org.label-schema.version=$APP_VERSION

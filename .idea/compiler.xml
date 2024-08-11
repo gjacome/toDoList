@@ -3,9 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="toDoList.toDoList.main" target="21" />
-      <module name="toDoList.toDoList.main~1" target="21" />
       <module name="toDoList.toDoList.test" target="21" />
-      <module name="toDoList.toDoList.test~1" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>

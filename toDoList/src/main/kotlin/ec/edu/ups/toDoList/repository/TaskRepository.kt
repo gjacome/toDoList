@@ -1,4 +1,4 @@
-package ec.edu.ups.toDoList.repositoy
+package ec.edu.ups.toDoList.repository
 
 import ec.edu.ups.toDoList.entity.TaskEntity
 import org.springframework.data.jpa.repository.JpaRepository

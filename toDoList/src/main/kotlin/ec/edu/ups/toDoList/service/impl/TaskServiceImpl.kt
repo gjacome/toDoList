@@ -2,7 +2,7 @@ package ec.edu.ups.toDoList.service.impl
 
 import ec.edu.ups.toDoList.dto.TaskDto
 import ec.edu.ups.toDoList.mapper.TaskMapper
-import ec.edu.ups.toDoList.repositoy.TaskRepository
+import ec.edu.ups.toDoList.repository.TaskRepository
 import ec.edu.ups.toDoList.service.ITaskService
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired

@@ -23,18 +23,32 @@ class TaskController {
 
     @PostMapping
     fun save(@RequestBody taskDto: TaskDto): ResponseEntity<Any> {
-        return ResponseEntity(taskService.save(taskDto), HttpStatus.OK)
+        return try {
+            ResponseEntity(taskService.save(taskDto), HttpStatus.OK)
+        } catch (ex: Exception) {
+            ResponseEntity(ex.message, HttpStatus.INTERNAL_SERVER_ERROR)
+        }
+
     }
 
     @PutMapping
     fun update(@RequestBody taskDto: TaskDto): ResponseEntity<Any> {
-        taskService.update(taskDto)
-        return ResponseEntity(HttpStatus.OK)
+        return try {
+            taskService.update(taskDto)
+            ResponseEntity(HttpStatus.OK)
+        } catch (ex: Exception) {
+            ResponseEntity(ex.message, HttpStatus.INTERNAL_SERVER_ERROR)
+        }
     }
 
     @GetMapping
     fun getAll(@RequestParam idUser: Short): ResponseEntity<Any> {
-        return ResponseEntity(taskService.getAll(idUser), HttpStatus.OK)
+        return try {
+            ResponseEntity(taskService.getAll(idUser), HttpStatus.OK)
+        } catch (ex: Exception) {
+            ResponseEntity(ex.message, HttpStatus.INTERNAL_SERVER_ERROR)
+        }
+
     }
 
 }
